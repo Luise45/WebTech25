@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
+   
 <head>
+    <img  src="/images/fiw.jpg"  alt="fiw logo" width="50">
+
     <meta charset="UTF-8">
     <title>Meine erste HTML-Seite </title>
    
     <link rel="stylesheet" href="../styles/mystyles.css">
     <a> Wbsite Neu laden </a>
-  
+   <div  class="wrapper">
+        <div class="one orange">One</div>
+        <div class="two orange">Two</div>
+        <div class="three orange">Three</div>
+        <div class="four orange">Four</div>
+        <div class="five orange">Five</div>
+        <div class="six orange">Six</div>
+    
+    </div>
 <style>
 h1 {
     background-color: aqua; 
@@ -14,6 +25,47 @@ h1 {
 p { 
     text-transform: lowercase;
 }
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(200px, auto);
+}
+.one {
+  grid-column-start: 3;
+  grid-row-end: 3;
+  grid-row-start: 2;
+  grid-column-end: 4;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.orange {
+    background-color: orange;
+    opacity: 0.5;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 30px;
+}
+
 p1{
     color:blue;
 }
@@ -42,12 +94,7 @@ p1::first-letter {
 p1::first-line {
     font-weight: bold;
 }
-div {
-    width: 120px;
-    padding: 10px;
-    border: 5px solid rgb(106, 170, 50);
-    margin: 0;
-}
+
 
 #p1 {
     float:left;
